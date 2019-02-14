@@ -8,6 +8,9 @@ class QuestionIndex(indexes.SearchIndex, indexes.Indexable):
     text = indexes.CharField(document=True, use_template=True)
     pub_date = indexes.DateTimeField(model_attr='pub_date')
 
+    # We add this for autocomplete.
+    text_auto = indexes.EdgeNgramField(model_attr='question_text')
+
     def get_model(self):
         return Question
 
