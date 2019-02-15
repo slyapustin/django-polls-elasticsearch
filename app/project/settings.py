@@ -121,3 +121,6 @@ HAYSTACK_CONNECTIONS = {
 }
 
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 1
+
+# Update Search index in realtime (using models.db.signals)
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
