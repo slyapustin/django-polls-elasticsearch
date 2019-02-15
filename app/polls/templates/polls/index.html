@@ -23,12 +23,12 @@
   <script src="{% static 'polls/js/autocomplete.js' %}"></script>
 
   <script type="text/javascript">
-    $(document).ready(function () {
+    $(function () {
       window.autocomplete = new Autocomplete({
         form_selector: '.autocomplete',
         url: '{% url 'polls:autocomplete' %}'
       });
       window.autocomplete.setup()
-    })
+    });
   </script>
 {% endblock body %}
