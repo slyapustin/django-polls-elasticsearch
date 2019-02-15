@@ -9,3 +9,4 @@ Repository with examples for the Medium articles:
   - Clone repository
   - Start app: `docker-compose up`
   - Visit http://localhost/
+  - Use login `demo` and password `demo` for the [Django Admin](http://localhost/admin) page

@@ -9,10 +9,13 @@ services:
       - elasticsearch
     volumes:
       - ./app/:/app/
-    command: bash -c "sleep 10
+    command: bash -c "sleep 15
       && python ./manage.py migrate
+      && python ./manage.py init_demo
       && python ./manage.py update_index
       && python ./manage.py runserver 0.0.0.0:8000"
+    environment:
+      - INIT_DEMO=True
 
   postgres:
     image: postgres:latest
@@ -21,8 +24,6 @@ services:
 
   elasticsearch:
     image: launcher.gcr.io/google/elasticsearch2
-    #environment:
-    #  - discovery.type=single-node
     ports:
       - "9200:9200"
       - "9300:9300"
