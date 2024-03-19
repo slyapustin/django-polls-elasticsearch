@@ -1,4 +1,4 @@
 django-haystack==2.8.1
-Django==3.2.24
+Django==3.2.25
 elasticsearch==2.4.1
 psycopg2-binary==2.8.4
